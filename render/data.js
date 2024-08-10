@@ -50,7 +50,7 @@ var specifyNumber = 0;
 var tributeCard;
 
 function sendInfoImage(isdn) {
-    infoImageObject.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/info/" + boardCards[isdn]["name"] +".png";
+    infoImageObject.source = "file:////Users/wangmin/Git/dota_card/image/info/" + boardCards[isdn]["name"] +".png";
     infoTextObject.text = boardCards[isdn]["description"]
 }
 

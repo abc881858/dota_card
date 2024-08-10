@@ -7,32 +7,32 @@ Item {
     id: card_item
     MediaPlayer {
         id: card_moveMusic
-        // source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/voice/card_move.wav"
+        // source: "file:////Users/wangmin/Git/dota_card/voice/card_move.wav"
         // audioOutput: AudioOutput {}
     }
     MediaPlayer {
         id: ikenieMusic
-        // source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/voice/ikenie.wav"
+        // source: "file:////Users/wangmin/Git/dota_card/voice/ikenie.wav"
         // audioOutput: AudioOutput {}
     }
     MediaPlayer {
         id: magic_activeMusic
-        // source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/voice/magic_active.wav"
+        // source: "file:////Users/wangmin/Git/dota_card/voice/magic_active.wav"
         // audioOutput: AudioOutput {}
     }
     MediaPlayer {
         id: card_attacked_brakeMusic
-        // source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/voice/card_attacked_brake.wav"
+        // source: "file:////Users/wangmin/Git/dota_card/voice/card_attacked_brake.wav"
         // audioOutput: AudioOutput {}
     }
     MediaPlayer {
         id: card_openMusic
-        // source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/voice/card_open.wav"
+        // source: "file:////Users/wangmin/Git/dota_card/voice/card_open.wav"
         // audioOutput: AudioOutput {}
     }
     MediaPlayer {
         id: attackMusic
-        // source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/voice/attack.wav"
+        // source: "file:////Users/wangmin/Git/dota_card/voice/attack.wav"
         // audioOutput: AudioOutput {}
     }
 
@@ -102,12 +102,12 @@ Item {
                                 setButton.visible = true;
                                 Data.tributeNumber = 3
                             } else {
-                                tipInfo.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/tip/tip1.png"//必须要有祭品 才能召唤上场
+                                tipInfo.source = "file:////Users/wangmin/Git/dota_card/image/tip/tip1.png"//必须要有祭品 才能召唤上场
                                 tipInfo.visible = true
                             }
                         }
                     } else {
-                        tipInfo.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/tip/tip3.png"//战斗流程中 不能召唤
+                        tipInfo.source = "file:////Users/wangmin/Git/dota_card/image/tip/tip3.png"//战斗流程中 不能召唤
                         tipInfo.visible = true
                     }
                 }
@@ -176,35 +176,35 @@ Item {
     onHighlightChanged: {
         if(highlight) {
             if(card_item.state === "blueHandArea") {
-                highlight_image.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/chooseBlue.png";
+                highlight_image.source = "file:////Users/wangmin/Git/dota_card/image/chooseBlue.png";
                 highlight_image.rotation = 0;
                 highlight_image.visible = true;
                 highlightAnimation1.start();
             } else if(card_item.state === "blueVerticalFaceupFront" ||
                       card_item.state === "blueVerticalFacedownFront" ||
                       card_item.state === "blueGrave") {
-                highlight_image.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/selectBlue.png";
+                highlight_image.source = "file:////Users/wangmin/Git/dota_card/image/selectBlue.png";
                 highlight_image.rotation = 0;
                 highlight_image.visible = true;
             } else if(card_item.state === "blueHorizontalFaceupFront" ||
                       card_item.state === "blueHorizontalFacedownFront") {
-                highlight_image.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/selectBlue.png";
+                highlight_image.source = "file:////Users/wangmin/Git/dota_card/image/selectBlue.png";
                 highlight_image.rotation = 90;
                 highlight_image.visible = true;
             } else if(card_item.state === "redHandArea") {
-                highlight_image.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/chooseRed.png";
+                highlight_image.source = "file:////Users/wangmin/Git/dota_card/image/chooseRed.png";
                 highlight_image.rotation = 0;
                 highlight_image.visible = true;
                 highlightAnimation2.start();
             } else if(card_item.state === "redVerticalFaceupFront" ||
                       card_item.state === "redVerticalFacedownFront" ||
                       card_item.state === "redGrave") {
-                highlight_image.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/selectRed.png";
+                highlight_image.source = "file:////Users/wangmin/Git/dota_card/image/selectRed.png";
                 highlight_image.rotation = 0;
                 highlight_image.visible = true;
             } else if(card_item.state === "redHorizontalFaceupFront" ||
                       card_item.state === "redHorizontalFacedownFront") {
-                highlight_image.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/selectRed.png";
+                highlight_image.source = "file:////Users/wangmin/Git/dota_card/image/selectRed.png";
                 highlight_image.rotation = 90;
                 highlight_image.visible = true;
             }
@@ -237,8 +237,8 @@ Item {
     Flipable {
         id: card_image
         anchors.fill: card_item
-        front: Image { id: frontItem; source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/area/null.png"; anchors.centerIn: card_image }
-        back: Image { id: backItem; source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/area/null.png"; anchors.centerIn: card_image }
+        front: Image { id: frontItem; source: "file:////Users/wangmin/Git/dota_card/image/area/null.png"; anchors.centerIn: card_image }
+        back: Image { id: backItem; source: "file:////Users/wangmin/Git/dota_card/image/area/null.png"; anchors.centerIn: card_image }
         transform: [
             Rotation {
                 id: rotationFace;
@@ -270,7 +270,7 @@ Item {
             anchors.fill: effect1
             width: 138
             height: 130
-            source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/eff_rainbow.png"
+            source: "file:////Users/wangmin/Git/dota_card/image/eff_rainbow.png"
             visible: false
         }
     }
@@ -282,7 +282,7 @@ Item {
         opacity: 0.0
         anchors.horizontalCenter: card_item.horizontalCenter
         anchors.verticalCenter: card_item.verticalCenter
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/eff_set_b.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/eff_set_b.png"
         visible: false
     }
 
@@ -291,7 +291,7 @@ Item {
         x: 0
         y: 0
         rotation: 0
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/sword.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/sword.png"
         visible: false
         property int endX: 235
         property int endY: -486
@@ -376,7 +376,7 @@ Item {
         anchors.horizontalCenter: card_item.horizontalCenter
         anchors.bottom: card_item.top
         anchors.topMargin: 5
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/tip/tip1.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/tip/tip1.png"
         visible: false
     }
 
@@ -385,7 +385,7 @@ Item {
         anchors.fill: card_item
         x: -5
         y: -5
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/chooseBlue.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/chooseBlue.png"
         visible: false
     }
 
@@ -589,7 +589,7 @@ Item {
         opacity: 0.0
         anchors.horizontalCenter: card_item.horizontalCenter
         anchors.verticalCenter: card_item.verticalCenter
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/active.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/active.png"
         visible: false
     }
 
@@ -776,8 +776,8 @@ Item {
             to: "blueDeckArea"
             ScriptAction {
                 script: {
-                    frontItem.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/area/" + Data.boardCards[isdn]["name"]+ ".png"
-                    backItem.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/area/null.png"
+                    frontItem.source = "file:////Users/wangmin/Git/dota_card/image/area/" + Data.boardCards[isdn]["name"]+ ".png"
+                    backItem.source = "file:////Users/wangmin/Git/dota_card/image/area/null.png"
                     card_item.width = 90
                     card_item.height = 130
                 }
@@ -790,8 +790,8 @@ Item {
                 ScriptAction {
                     script: {
                         card_moveMusic.play();
-                        frontItem.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/hand/" + Data.boardCards[isdn]["name"]+ ".png"
-                        backItem.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/hand/null.png"
+                        frontItem.source = "file:////Users/wangmin/Git/dota_card/image/hand/" + Data.boardCards[isdn]["name"]+ ".png"
+                        backItem.source = "file:////Users/wangmin/Git/dota_card/image/hand/null.png"
                         card_item.width = 180
                         card_item.height = 261
                     }
@@ -816,8 +816,8 @@ Item {
                 ScriptAction {
                     script: {
                         card_moveMusic.play();
-                        frontItem.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/area/" + Data.boardCards[isdn]["name"]+ ".png"
-                        backItem.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/area/null.png"
+                        frontItem.source = "file:////Users/wangmin/Git/dota_card/image/area/" + Data.boardCards[isdn]["name"]+ ".png"
+                        backItem.source = "file:////Users/wangmin/Git/dota_card/image/area/null.png"
                         card_item.width = 90
                         card_item.height = 130
                     }
@@ -873,8 +873,8 @@ Item {
                 ScriptAction {
                     script: {
                         card_moveMusic.play();
-                        frontItem.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/area/" + Data.boardCards[isdn]["name"]+ ".png"
-                        backItem.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/area/null.png"
+                        frontItem.source = "file:////Users/wangmin/Git/dota_card/image/area/" + Data.boardCards[isdn]["name"]+ ".png"
+                        backItem.source = "file:////Users/wangmin/Git/dota_card/image/area/null.png"
                         card_item.width = 90
                         card_item.height = 130
                     }
@@ -908,8 +908,8 @@ Item {
             to: "redDeckArea"
             ScriptAction {
                 script: {
-                    frontItem.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/area/" + Data.boardCards[isdn]["name"]+ ".png"
-                    backItem.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/area/null2.png"
+                    frontItem.source = "file:////Users/wangmin/Git/dota_card/image/area/" + Data.boardCards[isdn]["name"]+ ".png"
+                    backItem.source = "file:////Users/wangmin/Git/dota_card/image/area/null2.png"
                     card_item.width = 90
                     card_item.height = 130
                 }
@@ -922,8 +922,8 @@ Item {
                 ScriptAction {
                     script: {
                         card_moveMusic.play();
-                        frontItem.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/hand/" + Data.boardCards[isdn]["name"]+ ".png"
-                        backItem.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/hand/null2.png"
+                        frontItem.source = "file:////Users/wangmin/Git/dota_card/image/hand/" + Data.boardCards[isdn]["name"]+ ".png"
+                        backItem.source = "file:////Users/wangmin/Git/dota_card/image/hand/null2.png"
                         card_item.width = 180
                         card_item.height = 261
                     }
@@ -942,8 +942,8 @@ Item {
                 ScriptAction {
                     script: {
                         ikenieMusic.play();
-                        frontItem.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/area/" + Data.boardCards[isdn]["name"]+ ".png"
-                        backItem.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/area/null2.png"
+                        frontItem.source = "file:////Users/wangmin/Git/dota_card/image/area/" + Data.boardCards[isdn]["name"]+ ".png"
+                        backItem.source = "file:////Users/wangmin/Git/dota_card/image/area/null2.png"
                         card_item.width = 90
                         card_item.height = 130
                     }
@@ -971,8 +971,8 @@ Item {
                 ScriptAction {
                     script: {
                         card_moveMusic.play();
-                        frontItem.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/area/" + Data.boardCards[isdn]["name"]+ ".png"
-                        backItem.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/area/null.png"
+                        frontItem.source = "file:////Users/wangmin/Git/dota_card/image/area/" + Data.boardCards[isdn]["name"]+ ".png"
+                        backItem.source = "file:////Users/wangmin/Git/dota_card/image/area/null.png"
                         card_item.width = 90
                         card_item.height = 130
                     }

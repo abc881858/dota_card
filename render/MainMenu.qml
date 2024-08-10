@@ -7,12 +7,12 @@ Item {
     id: main_menu
     MediaPlayer {
         id: startMusic
-        // source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/voice/start.wav"
+        // source: "file:////Users/wangmin/Git/dota_card/voice/start.wav"
         // audioOutput: AudioOutput {}
     }
     MediaPlayer {
         id: decideMusic
-        // source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/voice/decide.wav"
+        // source: "file:////Users/wangmin/Git/dota_card/voice/decide.wav"
         // audioOutput: AudioOutput {}
     }
 
@@ -26,7 +26,7 @@ Item {
         anchors.fill: main_menu
         width: 1440
         height: 1080
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/menu/menu_main_0.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/menu/menu_main_0.png"
 
         Image {
             id: menu_1
@@ -34,7 +34,7 @@ Item {
             y: 527
             width: 135
             height: 522
-            source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/menu/menu_main_1.png"
+            source: "file:////Users/wangmin/Git/dota_card/image/menu/menu_main_1.png"
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
@@ -48,7 +48,7 @@ Item {
             y: 527
             width: 135
             height: 522
-            source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/menu/menu_main_2.png"
+            source: "file:////Users/wangmin/Git/dota_card/image/menu/menu_main_2.png"
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
@@ -63,7 +63,7 @@ Item {
             y: 527
             width: 135
             height: 522
-            source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/menu/menu_main_3.png"
+            source: "file:////Users/wangmin/Git/dota_card/image/menu/menu_main_3.png"
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
@@ -77,7 +77,7 @@ Item {
             y: 527
             width: 135
             height: 522
-            source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/menu/menu_main_4.png"
+            source: "file:////Users/wangmin/Git/dota_card/image/menu/menu_main_4.png"
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
@@ -101,7 +101,7 @@ Item {
         y: 435
         width: 828
         height: 288
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/juedoukaishi.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/juedoukaishi.png"
         visible: false
     }
 

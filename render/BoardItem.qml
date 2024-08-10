@@ -7,30 +7,30 @@ Image {
     id: board
     MediaPlayer {
         id: backmusicMusic
-        // source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/voice/backmusic.wav"
+        // source: "file:////Users/wangmin/Git/dota_card/voice/backmusic.wav"
         // audioOutput: AudioOutput {}
     }
     MediaPlayer {
         id: battle_turnMusic
-        // source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/voice/battle_turn.wav"
+        // source: "file:////Users/wangmin/Git/dota_card/voice/battle_turn.wav"
         // audioOutput: AudioOutput {}
     }
     MediaPlayer {
         id: turn_changeMusic
-        // source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/voice/turn_change.wav"
+        // source: "file:////Users/wangmin/Git/dota_card/voice/turn_change.wav"
         // audioOutput: AudioOutput {}
     }
     MediaPlayer {
         id: damageMusic
-        // source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/voice/damage.wav"
+        // source: "file:////Users/wangmin/Git/dota_card/voice/damage.wav"
         // audioOutput: AudioOutput {}
     }
 
-    x: 400
+    x: 0
     anchors.top: parent.top
     width: 1440
     height: 1080
-    source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/bg.png"
+    source: "file:////Users/wangmin/Git/dota_card/image/bg.png"
     state: "startGame"
     property string lastState: ""
 
@@ -80,7 +80,7 @@ Image {
         y: 0
         width: 47
         height: 61
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/LPNA.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/LP/LPNA.png"
     }
 
     Image {
@@ -89,7 +89,7 @@ Image {
         y: 0
         width: 47
         height: 61
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/LP8.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/LP/LP8.png"
     }
 
     Image {
@@ -98,7 +98,7 @@ Image {
         y: 0
         width: 47
         height: 61
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/LP0.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/LP/LP0.png"
     }
 
     Image {
@@ -107,7 +107,7 @@ Image {
         y: 0
         width: 47
         height: 61
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/LP0.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/LP/LP0.png"
     }
 
     Image {
@@ -116,7 +116,7 @@ Image {
         y: 0
         width: 47
         height: 61
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/LP0.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/LP/LP0.png"
     }
 
     Image {
@@ -125,7 +125,7 @@ Image {
         y: 950
         width: 47
         height: 61
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/LPNA.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/LP/LPNA.png"
     }
 
     Image {
@@ -134,7 +134,7 @@ Image {
         y: 950
         width: 47
         height: 61
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/LP8.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/LP/LP8.png"
     }
 
     Image {
@@ -143,7 +143,7 @@ Image {
         y: 950
         width: 47
         height: 61
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/LP0.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/LP/LP0.png"
     }
 
     Image {
@@ -152,7 +152,7 @@ Image {
         y: 950
         width: 47
         height: 61
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/LP0.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/LP/LP0.png"
     }
 
     Image {
@@ -161,7 +161,7 @@ Image {
         y: 950
         width: 47
         height: 61
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/LP0.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/LP/LP0.png"
     }
 
     Image {
@@ -170,7 +170,7 @@ Image {
         y: 200
         width: 29
         height: 72
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/damageNA.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/LP/damageNA.png"
     }
 
     Image {
@@ -179,7 +179,7 @@ Image {
         y: 200
         width: 29
         height: 72
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/damageNA.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/LP/damageNA.png"
     }
 
     Image {
@@ -188,7 +188,7 @@ Image {
         y: 200
         width: 29
         height: 72
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/damageNA.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/LP/damageNA.png"
     }
 
     Image {
@@ -197,7 +197,7 @@ Image {
         y: 200
         width: 29
         height: 72
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/damageNA.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/LP/damageNA.png"
     }
 
     Image {
@@ -206,7 +206,7 @@ Image {
         y: 200
         width: 29
         height: 72
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/damageNA.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/LP/damageNA.png"
     }
 
     Image {
@@ -215,7 +215,7 @@ Image {
         y: 200
         width: 29
         height: 72
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/damageNA.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/LP/damageNA.png"
     }
 
     Image {
@@ -224,7 +224,7 @@ Image {
         y: 800
         width: 29
         height: 72
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/damageNA.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/LP/damageNA.png"
     }
 
     Image {
@@ -233,7 +233,7 @@ Image {
         y: 800
         width: 29
         height: 72
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/damageNA.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/LP/damageNA.png"
     }
 
     Image {
@@ -242,7 +242,7 @@ Image {
         y: 800
         width: 29
         height: 72
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/damageNA.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/LP/damageNA.png"
     }
 
     Image {
@@ -251,7 +251,7 @@ Image {
         y: 800
         width: 29
         height: 72
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/damageNA.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/LP/damageNA.png"
     }
 
     Image {
@@ -260,7 +260,7 @@ Image {
         y: 800
         width: 29
         height: 72
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/damageNA.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/LP/damageNA.png"
     }
 
     Image {
@@ -269,7 +269,7 @@ Image {
         y: 800
         width: 29
         height: 72
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/damageNA.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/LP/damageNA.png"
     }
 
     Image {
@@ -279,9 +279,9 @@ Image {
         z: 99
         width: 742
         height: 324
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/dialog/dialog3.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/dialog/dialog3.png"
         visible: false
-        property string sourcePath: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/dialog/dialog%1.png"
+        property string sourcePath: "file:////Users/wangmin/Git/dota_card/image/dialog/dialog%1.png"
         property int index: 3
         onIndexChanged: {
             source = sourcePath.arg(index)
@@ -318,7 +318,7 @@ Image {
             y: 0
             width: 144
             height: 270
-            source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_s_dr.bmp"
+            source: "file:////Users/wangmin/Git/dota_card/image/phase/pha_s_dr.bmp"
         }
     }
 
@@ -335,7 +335,7 @@ Image {
             y: 0
             width: 144
             height: 270
-            source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_s_st.bmp"
+            source: "file:////Users/wangmin/Git/dota_card/image/phase/pha_s_st.bmp"
         }
     }
 
@@ -352,7 +352,7 @@ Image {
             y: 0
             width: 144
             height: 270
-            source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_s_m1.bmp"
+            source: "file:////Users/wangmin/Git/dota_card/image/phase/pha_s_m1.bmp"
         }
     }
 
@@ -369,7 +369,7 @@ Image {
             y: 0
             width: 144
             height: 270
-            source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_s_ba.bmp"
+            source: "file:////Users/wangmin/Git/dota_card/image/phase/pha_s_ba.bmp"
 
             MouseArea {
                 id: mouse_BP
@@ -396,7 +396,7 @@ Image {
             y: 0
             width: 144
             height: 270
-            source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_s_m2.bmp"
+            source: "file:////Users/wangmin/Git/dota_card/image/phase/pha_s_m2.bmp"
 
             MouseArea {
                 id: mouse_M2
@@ -423,7 +423,7 @@ Image {
             y: 0
             width: 144
             height: 270
-            source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_s_en.bmp"
+            source: "file:////Users/wangmin/Git/dota_card/image/phase/pha_s_en.bmp"
 
             MouseArea {
                 id: mouse_EP
@@ -445,7 +445,7 @@ Image {
         y: 498
         width: 475
         height: 79
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_ba_b1.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/phase_name/e_ba_b1.png"
         visible: false
     }
 
@@ -455,7 +455,7 @@ Image {
         y: 498
         width: 430
         height: 79
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_dr_b.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/phase_name/e_dr_b.png"
         visible: false
     }
 
@@ -465,7 +465,7 @@ Image {
         y: 135
         width: 360
         height: 522
-        source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/info/null.png"
+        source: "file:////Users/wangmin/Git/dota_card/image/info/null.png"
         fillMode: Image.PreserveAspectFit
     }
 
@@ -502,7 +502,7 @@ Image {
             y: 0
             width: 1008
             height: 72
-            source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/coin.png"
+            source: "file:////Users/wangmin/Git/dota_card/image/coin.png"
         }
         Timer {
             id: coin1Timer
@@ -546,7 +546,7 @@ Image {
             y: 0
             width: 1008
             height: 72
-            source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/coin.png"
+            source: "file:////Users/wangmin/Git/dota_card/image/coin.png"
         }
         Timer {
             id: coin2Timer
@@ -590,7 +590,7 @@ Image {
             y: 0
             width: 1008
             height: 72
-            source: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/coin.png"
+            source: "file:////Users/wangmin/Git/dota_card/image/coin.png"
         }
         Timer {
             id: coin3Timer
@@ -666,13 +666,13 @@ Image {
         property int damageBai: (damageValue-damageQian*1000)/100
         property int damageShi: (damageValue-damageQian*1000-damageBai*100)/10
         property int damageGe: damageValue%10
-        property string damagePath: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/damage%1.png"
+        property string damagePath: "file:////Users/wangmin/Git/dota_card/image/LP/damage%1.png"
         property int lpValue: 8000
         property int lpQian: lpValue/1000
         property int lpBai: (lpValue-lpQian*1000)/100
         property int lpShi: (lpValue-lpQian*1000-lpBai*100)/10
         property int lpGe: lpValue%10
-        property string lpPath: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/LP%1.png"
+        property string lpPath: "file:////Users/wangmin/Git/dota_card/image/LP/LP%1.png"
         interval: 200
         running: false
         repeat: true
@@ -729,13 +729,13 @@ Image {
         property int damageBai: (damageValue-damageQian*1000)/100
         property int damageShi: (damageValue-damageQian*1000-damageBai*100)/10
         property int damageGe: damageValue%10
-        property string damagePath: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/damage%1.png"
+        property string damagePath: "file:////Users/wangmin/Git/dota_card/image/LP/damage%1.png"
         property int lpValue: 8000
         property int lpQian: lpValue/1000
         property int lpBai: (lpValue-lpQian*1000)/100
         property int lpShi: (lpValue-lpQian*1000-lpBai*100)/10
         property int lpGe: lpValue%10
-        property string lpPath: "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/LP/LP%1.png"
+        property string lpPath: "file:////Users/wangmin/Git/dota_card/image/LP/LP%1.png"
         interval: 200
         running: false
         repeat: true
@@ -881,7 +881,7 @@ Image {
             PauseAnimation { duration: 600 }
         }
         SequentialAnimation {
-            ScriptAction { script: { otherPhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_dr_b.png"; otherPhaseImage.visible = true; } }
+            ScriptAction { script: { otherPhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_dr_b.png"; otherPhaseImage.visible = true; } }
             NumberAnimation { target: otherPhaseImage; property: "opacity"; from: 0; to: 1; duration: 200 }
             PauseAnimation { duration: 400 }
             NumberAnimation { target: otherPhaseImage; property: "opacity"; from: 1; to: 0; duration: 200 }
@@ -911,7 +911,7 @@ Image {
             PauseAnimation { duration: 600 }
         }
         SequentialAnimation {
-            ScriptAction { script: { otherPhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_st_b.png"; otherPhaseImage.visible = true; } }
+            ScriptAction { script: { otherPhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_st_b.png"; otherPhaseImage.visible = true; } }
             NumberAnimation { target: otherPhaseImage; property: "opacity"; from: 0; to: 1; duration: 200 }
             PauseAnimation { duration: 400 }
             NumberAnimation { target: otherPhaseImage; property: "opacity"; from: 1; to: 0; duration: 200 }
@@ -938,7 +938,7 @@ Image {
             PauseAnimation { duration: 600 }
         }
         SequentialAnimation {
-            ScriptAction { script: { otherPhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_m1_b.png"; otherPhaseImage.visible = true; } }
+            ScriptAction { script: { otherPhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_m1_b.png"; otherPhaseImage.visible = true; } }
             NumberAnimation { target: otherPhaseImage; property: "opacity"; from: 0; to: 1; duration: 200 }
             PauseAnimation { duration: 400 }
             NumberAnimation { target: otherPhaseImage; property: "opacity"; from: 1; to: 0; duration: 200 }
@@ -965,21 +965,21 @@ Image {
             PauseAnimation { duration: 600 }
         }
         SequentialAnimation {
-            ScriptAction { script: { battlePhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_ba_b1.png"; battlePhaseImage.visible = true; } }
+            ScriptAction { script: { battlePhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_ba_b1.png"; battlePhaseImage.visible = true; } }
             PauseAnimation { duration: 100 }
-            ScriptAction { script: { battlePhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_ba_b2.png"; } }
+            ScriptAction { script: { battlePhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_ba_b2.png"; } }
             PauseAnimation { duration: 100 }
-            ScriptAction { script: { battlePhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_ba_b3.png"; } }
+            ScriptAction { script: { battlePhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_ba_b3.png"; } }
             PauseAnimation { duration: 100 }
-            ScriptAction { script: { battlePhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_ba_b4.png"; } }
+            ScriptAction { script: { battlePhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_ba_b4.png"; } }
             PauseAnimation { duration: 100 }
-            ScriptAction { script: { battlePhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_ba_b5.png"; } }
+            ScriptAction { script: { battlePhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_ba_b5.png"; } }
             PauseAnimation { duration: 100 }
-            ScriptAction { script: { battlePhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_ba_b6.png"; } }
+            ScriptAction { script: { battlePhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_ba_b6.png"; } }
             PauseAnimation { duration: 100 }
-            ScriptAction { script: { battlePhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_ba_b7.png"; } }
+            ScriptAction { script: { battlePhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_ba_b7.png"; } }
             PauseAnimation { duration: 100 }
-            ScriptAction { script: { battlePhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_ba_b8.png"; } }
+            ScriptAction { script: { battlePhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_ba_b8.png"; } }
             PauseAnimation { duration: 100 }
             ScriptAction { script: { battlePhaseImage.visible = false; } }
         }
@@ -1003,7 +1003,7 @@ Image {
             PauseAnimation { duration: 600 }
         }
         SequentialAnimation {
-            ScriptAction { script: { otherPhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_m2_b.png"; otherPhaseImage.visible = true; } }
+            ScriptAction { script: { otherPhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_m2_b.png"; otherPhaseImage.visible = true; } }
             NumberAnimation { target: otherPhaseImage; property: "opacity"; from: 0; to: 1; duration: 200 }
             PauseAnimation { duration: 400 }
             NumberAnimation { target: otherPhaseImage; property: "opacity"; from: 1; to: 0; duration: 200 }
@@ -1029,7 +1029,7 @@ Image {
             PauseAnimation { duration: 600 }
         }
         SequentialAnimation {
-            ScriptAction { script: { otherPhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_en_b.png"; otherPhaseImage.visible = true; } }
+            ScriptAction { script: { otherPhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_en_b.png"; otherPhaseImage.visible = true; } }
             NumberAnimation { target: otherPhaseImage; property: "opacity"; from: 0; to: 1; duration: 200 }
             PauseAnimation { duration: 400 }
             NumberAnimation { target: otherPhaseImage; property: "opacity"; from: 1; to: 0; duration: 200 }
@@ -1061,7 +1061,7 @@ Image {
             PauseAnimation { duration: 600 }
         }
         SequentialAnimation {
-            ScriptAction { script: { otherPhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_dr_r.png"; otherPhaseImage.visible = true; } }
+            ScriptAction { script: { otherPhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_dr_r.png"; otherPhaseImage.visible = true; } }
             NumberAnimation { target: otherPhaseImage; property: "opacity"; from: 0; to: 1; duration: 200 }
             PauseAnimation { duration: 400 }
             NumberAnimation { target: otherPhaseImage; property: "opacity"; from: 1; to: 0; duration: 200 }
@@ -1090,7 +1090,7 @@ Image {
             PauseAnimation { duration: 600 }
         }
         SequentialAnimation {
-            ScriptAction { script: { otherPhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_st_r.png"; otherPhaseImage.visible = true; } }
+            ScriptAction { script: { otherPhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_st_r.png"; otherPhaseImage.visible = true; } }
             NumberAnimation { target: otherPhaseImage; property: "opacity"; from: 0; to: 1; duration: 200 }
             PauseAnimation { duration: 400 }
             NumberAnimation { target: otherPhaseImage; property: "opacity"; from: 1; to: 0; duration: 200 }
@@ -1117,7 +1117,7 @@ Image {
             PauseAnimation { duration: 600 }
         }
         SequentialAnimation {
-            ScriptAction { script: { otherPhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_m1_r.png"; otherPhaseImage.visible = true; } }
+            ScriptAction { script: { otherPhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_m1_r.png"; otherPhaseImage.visible = true; } }
             NumberAnimation { target: otherPhaseImage; property: "opacity"; from: 0; to: 1; duration: 200 }
             PauseAnimation { duration: 400 }
             NumberAnimation { target: otherPhaseImage; property: "opacity"; from: 1; to: 0; duration: 200 }
@@ -1156,21 +1156,21 @@ Image {
             PauseAnimation { duration: 600 }
         }
         SequentialAnimation {
-            ScriptAction { script: { battlePhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_ba_r1.png"; battlePhaseImage.visible = true; } }
+            ScriptAction { script: { battlePhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_ba_r1.png"; battlePhaseImage.visible = true; } }
             PauseAnimation { duration: 100 }
-            ScriptAction { script: { battlePhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_ba_r2.png"; } }
+            ScriptAction { script: { battlePhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_ba_r2.png"; } }
             PauseAnimation { duration: 100 }
-            ScriptAction { script: { battlePhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_ba_r3.png"; } }
+            ScriptAction { script: { battlePhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_ba_r3.png"; } }
             PauseAnimation { duration: 100 }
-            ScriptAction { script: { battlePhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_ba_r4.png"; } }
+            ScriptAction { script: { battlePhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_ba_r4.png"; } }
             PauseAnimation { duration: 100 }
-            ScriptAction { script: { battlePhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_ba_r5.png"; } }
+            ScriptAction { script: { battlePhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_ba_r5.png"; } }
             PauseAnimation { duration: 100 }
-            ScriptAction { script: { battlePhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_ba_r6.png"; } }
+            ScriptAction { script: { battlePhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_ba_r6.png"; } }
             PauseAnimation { duration: 100 }
-            ScriptAction { script: { battlePhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_ba_r7.png"; } }
+            ScriptAction { script: { battlePhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_ba_r7.png"; } }
             PauseAnimation { duration: 100 }
-            ScriptAction { script: { battlePhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_ba_r8.png"; } }
+            ScriptAction { script: { battlePhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_ba_r8.png"; } }
             PauseAnimation { duration: 100 }
             ScriptAction { script: { battlePhaseImage.visible = false; } }
         }
@@ -1207,7 +1207,7 @@ Image {
             PauseAnimation { duration: 600 }
         }
         SequentialAnimation {
-            ScriptAction { script: { otherPhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_m2_r.png"; otherPhaseImage.visible = true; } }
+            ScriptAction { script: { otherPhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_m2_r.png"; otherPhaseImage.visible = true; } }
             NumberAnimation { target: otherPhaseImage; property: "opacity"; from: 0; to: 1; duration: 200 }
             PauseAnimation { duration: 400 }
             NumberAnimation { target: otherPhaseImage; property: "opacity"; from: 1; to: 0; duration: 200 }
@@ -1251,7 +1251,7 @@ Image {
             PauseAnimation { duration: 600 }
         }
         SequentialAnimation {
-            ScriptAction { script: { otherPhaseImage.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase_name/e_en_r.png"; otherPhaseImage.visible = true; } }
+            ScriptAction { script: { otherPhaseImage.source = "file:////Users/wangmin/Git/dota_card/image/phase_name/e_en_r.png"; otherPhaseImage.visible = true; } }
             NumberAnimation { target: otherPhaseImage; property: "opacity"; from: 0; to: 1; duration: 200 }
             PauseAnimation { duration: 400 }
             NumberAnimation { target: otherPhaseImage; property: "opacity"; from: 1; to: 0; duration: 200 }
@@ -1381,22 +1381,22 @@ Image {
                     script: {
                         image_EP.x = 0;
                         ani_blue_EP.stop();
-                        image_DP.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_b_dr.bmp"
+                        image_DP.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_b_dr.bmp"
                         image_DP.width = 648
                         image_DP.height = 135
-                        image_SP.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_b_st.bmp"
+                        image_SP.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_b_st.bmp"
                         image_SP.width = 648
                         image_SP.height = 135
-                        image_M1.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_b_m1.bmp"
+                        image_M1.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_b_m1.bmp"
                         image_M1.width = 648
                         image_M1.height = 135
-                        image_BP.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_b_ba.bmp"
+                        image_BP.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_b_ba.bmp"
                         image_BP.width = 648
                         image_BP.height = 135
-                        image_M2.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_b_m2.bmp"
+                        image_M2.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_b_m2.bmp"
                         image_M2.width = 648
                         image_M2.height = 135
-                        image_EP.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_b_en.bmp"
+                        image_EP.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_b_en.bmp"
                         image_EP.width = 648
                         image_EP.height = 135
                         turn_changeMusic.play();
@@ -1420,7 +1420,7 @@ Image {
                 PauseAnimation { duration: 20 }
                 ScriptAction {
                     script: {
-                        image_DP.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_s_dr.bmp"
+                        image_DP.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_s_dr.bmp"
                         image_DP.width = 144
                         image_DP.height = 270
                         image_DP.x = 0
@@ -1445,7 +1445,7 @@ Image {
                 PauseAnimation { duration: 20 }
                 ScriptAction {
                     script: {
-                        image_SP.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_s_st.bmp"
+                        image_SP.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_s_st.bmp"
                         image_SP.width = 144
                         image_SP.height = 270
                         image_SP.x = 0
@@ -1470,7 +1470,7 @@ Image {
                 PauseAnimation { duration: 20 }
                 ScriptAction {
                     script: {
-                        image_M1.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_s_m1.bmp"
+                        image_M1.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_s_m1.bmp"
                         image_M1.width = 144
                         image_M1.height = 270
                         image_M1.x = 0
@@ -1495,7 +1495,7 @@ Image {
                 PauseAnimation { duration: 20 }
                 ScriptAction {
                     script: {
-                        image_BP.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_s_ba.bmp"
+                        image_BP.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_s_ba.bmp"
                         image_BP.width = 144
                         image_BP.height = 270
                         image_BP.x = 0
@@ -1520,7 +1520,7 @@ Image {
                 PauseAnimation { duration: 20 }
                 ScriptAction {
                     script: {
-                        image_M2.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_s_m2.bmp"
+                        image_M2.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_s_m2.bmp"
                         image_M2.width = 144
                         image_M2.height = 270
                         image_M2.x = 0
@@ -1545,7 +1545,7 @@ Image {
                 PauseAnimation { duration: 20 }
                 ScriptAction {
                     script: {
-                        image_EP.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_s_en.bmp"
+                        image_EP.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_s_en.bmp"
                         image_EP.width = 144
                         image_EP.height = 270
                         image_EP.x = 0
@@ -1647,27 +1647,27 @@ Image {
                     script: {
                         image_DP.x = 0;
                         ani_red_EP.stop();
-                        image_DP.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_r_dr.bmp"
+                        image_DP.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_r_dr.bmp"
                         image_DP.width = 648
                         image_DP.height = 135
                         image_DP.y = 0
-                        image_SP.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_r_st.bmp"
+                        image_SP.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_r_st.bmp"
                         image_SP.width = 648
                         image_SP.height = 135
                         image_SP.y = 0
-                        image_M1.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_r_m1.bmp"
+                        image_M1.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_r_m1.bmp"
                         image_M1.width = 648
                         image_M1.height = 135
                         image_M1.y = 0
-                        image_BP.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_r_ba.bmp"
+                        image_BP.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_r_ba.bmp"
                         image_BP.width = 648
                         image_BP.height = 135
                         image_BP.y = 0
-                        image_M2.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_r_m2.bmp"
+                        image_M2.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_r_m2.bmp"
                         image_M2.width = 648
                         image_M2.height = 135
                         image_M2.y = 0
-                        image_EP.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_r_en.bmp"
+                        image_EP.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_r_en.bmp"
                         image_EP.width = 648
                         image_EP.height = 135
                         image_EP.y = 0
@@ -1692,7 +1692,7 @@ Image {
                 PauseAnimation { duration: 20 }
                 ScriptAction {
                     script: {
-                        image_DP.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_s_dr.bmp"
+                        image_DP.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_s_dr.bmp"
                         image_DP.width = 144
                         image_DP.height = 270
                         image_DP.x = 0
@@ -1717,7 +1717,7 @@ Image {
                 PauseAnimation { duration: 20 }
                 ScriptAction {
                     script: {
-                        image_SP.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_s_st.bmp"
+                        image_SP.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_s_st.bmp"
                         image_SP.width = 144
                         image_SP.height = 270
                         image_SP.x = 0
@@ -1742,7 +1742,7 @@ Image {
                 PauseAnimation { duration: 20 }
                 ScriptAction {
                     script: {
-                        image_M1.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_s_m1.bmp"
+                        image_M1.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_s_m1.bmp"
                         image_M1.width = 144
                         image_M1.height = 270
                         image_M1.x = 0
@@ -1767,7 +1767,7 @@ Image {
                 PauseAnimation { duration: 20 }
                 ScriptAction {
                     script: {
-                        image_BP.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_s_ba.bmp"
+                        image_BP.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_s_ba.bmp"
                         image_BP.width = 144
                         image_BP.height = 270
                         image_BP.x = 0
@@ -1792,7 +1792,7 @@ Image {
                 PauseAnimation { duration: 20 }
                 ScriptAction {
                     script: {
-                        image_M2.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_s_m2.bmp"
+                        image_M2.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_s_m2.bmp"
                         image_M2.width = 144
                         image_M2.height = 270
                         image_M2.x = 0
@@ -1817,7 +1817,7 @@ Image {
                 PauseAnimation { duration: 20 }
                 ScriptAction {
                     script: {
-                        image_EP.source = "file:///C:/Users/Administrator/Desktop/work/CardEngine/image/phase/pha_s_en.bmp"
+                        image_EP.source = "file:////Users/wangmin/Git/dota_card/image/phase/pha_s_en.bmp"
                         image_EP.width = 144
                         image_EP.height = 270
                         image_EP.x = 0
