@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>BoardItem.qml</file>
+        <file>data.js</file>
+        <file>CardItem.qml</file>
+        <file>MainMenu.qml</file>
+    </qresource>
+</RCC>
