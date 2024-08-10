@@ -41,8 +41,20 @@
     <addaction name="shuffle_blue_grave"/>
     <addaction name="shuffle_red_grave"/>
    </widget>
+   <widget class="QMenu" name="menuphase">
+    <property name="title">
+     <string>phase</string>
+    </property>
+    <addaction name="actiondraw"/>
+    <addaction name="actionstandby"/>
+    <addaction name="actionmain1"/>
+    <addaction name="actionbattle"/>
+    <addaction name="actionmain2"/>
+    <addaction name="actionend"/>
+   </widget>
    <addaction name="game"/>
    <addaction name="menuaction"/>
+   <addaction name="menuphase"/>
   </widget>
   <action name="game_start">
    <property name="text">
@@ -82,6 +94,36 @@
   <action name="game_finish">
    <property name="text">
     <string>game_finish</string>
+   </property>
+  </action>
+  <action name="actiondraw">
+   <property name="text">
+    <string>draw</string>
+   </property>
+  </action>
+  <action name="actionstandby">
+   <property name="text">
+    <string>standby</string>
+   </property>
+  </action>
+  <action name="actionmain1">
+   <property name="text">
+    <string>main1</string>
+   </property>
+  </action>
+  <action name="actionbattle">
+   <property name="text">
+    <string>battle</string>
+   </property>
+  </action>
+  <action name="actionmain2">
+   <property name="text">
+    <string>main2</string>
+   </property>
+  </action>
+  <action name="actionend">
+   <property name="text">
+    <string>end</string>
    </property>
   </action>
  </widget>
