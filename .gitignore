@@ -1,1 +1,11 @@
 build/
+
+.DS_Store
+
+core/
+
+engine/
+
+DotaCard/
+
+render/

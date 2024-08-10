@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="game">
+    <property name="title">
+     <string>game</string>
+    </property>
+    <addaction name="game_start"/>
+    <addaction name="game_finish"/>
+   </widget>
+   <widget class="QMenu" name="menuaction">
+    <property name="title">
+     <string>shuffle</string>
+    </property>
+    <addaction name="shuffle_blue_deck"/>
+    <addaction name="shuffle_red_deck"/>
+    <addaction name="shuffle_blue_hand"/>
+    <addaction name="shuffle_red_hand"/>
+    <addaction name="shuffle_blue_grave"/>
+    <addaction name="shuffle_red_grave"/>
+   </widget>
+   <addaction name="game"/>
+   <addaction name="menuaction"/>
+  </widget>
+  <action name="game_start">
+   <property name="text">
+    <string>game_start</string>
+   </property>
+  </action>
+  <action name="shuffle_blue_deck">
+   <property name="text">
+    <string>shuffle_blue_deck</string>
+   </property>
+  </action>
+  <action name="shuffle_red_deck">
+   <property name="text">
+    <string>shuffle_red_deck</string>
+   </property>
+  </action>
+  <action name="shuffle_blue_hand">
+   <property name="text">
+    <string>shuffle_blue_hand</string>
+   </property>
+  </action>
+  <action name="shuffle_red_hand">
+   <property name="text">
+    <string>shuffle_red_hand</string>
+   </property>
+  </action>
+  <action name="shuffle_blue_grave">
+   <property name="text">
+    <string>shuffle_blue_grave</string>
+   </property>
+  </action>
+  <action name="shuffle_red_grave">
+   <property name="text">
+    <string>shuffle_red_grave</string>
+   </property>
+  </action>
+  <action name="game_finish">
+   <property name="text">
+    <string>game_finish</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
