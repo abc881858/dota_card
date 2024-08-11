@@ -14,8 +14,7 @@ void Game::slot_start_game()
     //init players
     //init cards
     //init board
-    //init rule
-    //init phase
+    //init rule    
     emit begin_start_game();
 }
 
@@ -23,8 +22,9 @@ void Game::end_start_game()
 {
     SHOW_DEBUG_INFO
     //change phase
-    //do shuffle_blue_deck
-    // emit begin_shuffle_blue_deck();
+    m_phase = DrawBlue;
+    qDebug() << "change phase to" << m_phase;
+    // slot_shuffle_blue_deck();
 }
 
 void Game::slot_finish_game()
@@ -55,8 +55,7 @@ void Game::end_shuffle_blue_deck()
 {
     SHOW_DEBUG_INFO
     //change phase
-    //do shuffle_red_deck
-    // emit begin_shuffle_red_deck();
+    // slot_shuffle_red_deck();
 }
 
 void Game::slot_shuffle_red_deck()

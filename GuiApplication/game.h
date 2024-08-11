@@ -7,6 +7,23 @@ class Game : public QObject
     Q_OBJECT
 public:
     explicit Game(QObject *parent = nullptr);
+    enum Phase {
+        DrawBlue,
+        StandbyBlue,
+        Main1Blue,
+        BattleBlue,
+        Main2Blue,
+        EndBlue,
+        DrawRed,
+        StandbyRed,
+        Main1Red,
+        BattleRed,
+        Main2Red,
+        EndRed
+    };
+    Q_ENUM(Phase)
+private:
+    Phase m_phase;
 public slots:
     void slot_start_game();
     void end_start_game();
