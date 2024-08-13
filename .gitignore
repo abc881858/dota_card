@@ -11,3 +11,44 @@ DotaCard/
 render/
 
 GuiApplication/GuiApplication.pro.user
+<<<<<<< HEAD
+=======
+
+GuiApplication/record_205121.csv
+
+GuiApplication/record_001043.csv
+
+GuiApplication/.qmake.stash
+
+GuiApplication/.vs/GuiApplication/v16/
+
+GuiApplication/.vs/GuiApplicationVS/v16/
+
+GuiApplication/debug/
+
+GuiApplication/GuiApplication.qtvscr
+
+GuiApplication/GuiApplication.vcxproj
+
+GuiApplication/GuiApplication.vcxproj.filters
+
+GuiApplication/GuiApplication.vcxproj.user
+
+GuiApplication/GuiApplicationVS.qtvscr
+
+GuiApplication/GuiApplicationVS.pro
+
+GuiApplication/GuiApplicationVS.sln
+
+GuiApplication/GuiApplicationVS.vcxproj
+
+GuiApplication/GuiApplicationVS.vcxproj.filters
+
+GuiApplication/GuiApplicationVS.vcxproj.user
+
+GuiApplication/record_011436.csv
+
+GuiApplication/release/moc_predefs.h.cbt
+
+GuiApplication/ui_mainwindow.h
+>>>>>>> 16bc7a1 (fix game_finish bug && record_next bug)
