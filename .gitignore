@@ -11,8 +11,6 @@ DotaCard/
 render/
 
 GuiApplication/GuiApplication.pro.user
-<<<<<<< HEAD
-=======
 
 GuiApplication/record_205121.csv
 
@@ -51,4 +49,3 @@ GuiApplication/record_011436.csv
 GuiApplication/release/moc_predefs.h.cbt
 
 GuiApplication/ui_mainwindow.h
->>>>>>> 16bc7a1 (fix game_finish bug && record_next bug)

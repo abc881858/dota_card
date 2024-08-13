@@ -6,21 +6,13 @@
    <rect>
     <x>0</x>
     <y>0</y>
-<<<<<<< HEAD
-    <width>800</width>
-    <height>600</height>
-=======
     <width>822</width>
     <height>711</height>
->>>>>>> 16bc7a1 (fix game_finish bug && record_next bug)
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string/>
   </property>
-<<<<<<< HEAD
-  <widget class="QWidget" name="centralwidget"/>
-=======
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
@@ -1784,19 +1776,13 @@
     </item>
    </layout>
   </widget>
->>>>>>> 16bc7a1 (fix game_finish bug && record_next bug)
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-<<<<<<< HEAD
-     <width>800</width>
-     <height>37</height>
-=======
      <width>822</width>
      <height>21</height>
->>>>>>> 16bc7a1 (fix game_finish bug && record_next bug)
     </rect>
    </property>
    <widget class="QMenu" name="game">
@@ -1821,16 +1807,53 @@
     <property name="title">
      <string>phase</string>
     </property>
-    <addaction name="actiondraw"/>
-    <addaction name="actionstandby"/>
-    <addaction name="actionmain1"/>
-    <addaction name="actionbattle"/>
-    <addaction name="actionmain2"/>
-    <addaction name="actionend"/>
+    <addaction name="phase_blue_draw"/>
+    <addaction name="phase_blue_standby"/>
+    <addaction name="phase_blue_main1"/>
+    <addaction name="phase_blue_battle"/>
+    <addaction name="phase_blue_main2"/>
+    <addaction name="phase_blue_end"/>
+    <addaction name="phase_red_draw"/>
+    <addaction name="phase_red_standby"/>
+    <addaction name="phase_red_main1"/>
+    <addaction name="phase_red_battle"/>
+    <addaction name="phase_red_main2"/>
+    <addaction name="phase_red_end"/>
+   </widget>
+   <widget class="QMenu" name="menublue">
+    <property name="title">
+     <string>blue_draw</string>
+    </property>
+    <addaction name="blue_draw_one"/>
+    <addaction name="blue_draw_two"/>
+    <addaction name="blue_draw_three"/>
+    <addaction name="blue_draw_four"/>
+    <addaction name="blue_draw_five"/>
+   </widget>
+   <widget class="QMenu" name="menurecord">
+    <property name="title">
+     <string>record</string>
+    </property>
+    <addaction name="record_load"/>
+    <addaction name="record_save"/>
+    <addaction name="record_next"/>
+   </widget>
+   <widget class="QMenu" name="menured">
+    <property name="title">
+     <string>red_draw</string>
+    </property>
+    <addaction name="red_draw_one"/>
+    <addaction name="red_draw_two"/>
+    <addaction name="red_draw_three"/>
+    <addaction name="red_draw_four"/>
+    <addaction name="red_draw_five"/>
    </widget>
    <addaction name="game"/>
    <addaction name="menuaction"/>
    <addaction name="menuphase"/>
+   <addaction name="menublue"/>
+   <addaction name="menured"/>
+   <addaction name="menurecord"/>
   </widget>
   <action name="game_start">
    <property name="text">
@@ -1872,34 +1895,129 @@
     <string>game_finish</string>
    </property>
   </action>
-  <action name="actiondraw">
+  <action name="phase_blue_draw">
    <property name="text">
-    <string>draw</string>
+    <string>phase_blue_draw</string>
    </property>
   </action>
-  <action name="actionstandby">
+  <action name="phase_blue_standby">
    <property name="text">
-    <string>standby</string>
+    <string>phase_blue_standby</string>
    </property>
   </action>
-  <action name="actionmain1">
+  <action name="phase_blue_main1">
    <property name="text">
-    <string>main1</string>
+    <string>phase_blue_main1</string>
    </property>
   </action>
-  <action name="actionbattle">
+  <action name="phase_blue_battle">
    <property name="text">
-    <string>battle</string>
+    <string>phase_blue_battle</string>
    </property>
   </action>
-  <action name="actionmain2">
+  <action name="phase_blue_main2">
    <property name="text">
-    <string>main2</string>
+    <string>phase_blue_main2</string>
    </property>
   </action>
-  <action name="actionend">
+  <action name="phase_blue_end">
    <property name="text">
-    <string>end</string>
+    <string>phase_blue_end</string>
+   </property>
+  </action>
+  <action name="phase_red_draw">
+   <property name="text">
+    <string>phase_red_draw</string>
+   </property>
+  </action>
+  <action name="phase_red_standby">
+   <property name="text">
+    <string>phase_red_standby</string>
+   </property>
+  </action>
+  <action name="phase_red_main1">
+   <property name="text">
+    <string>phase_red_main1</string>
+   </property>
+  </action>
+  <action name="phase_red_battle">
+   <property name="text">
+    <string>phase_red_battle</string>
+   </property>
+  </action>
+  <action name="phase_red_main2">
+   <property name="text">
+    <string>phase_red_main2</string>
+   </property>
+  </action>
+  <action name="phase_red_end">
+   <property name="text">
+    <string>phase_red_end</string>
+   </property>
+  </action>
+  <action name="blue_draw_one">
+   <property name="text">
+    <string>blue_draw_one</string>
+   </property>
+  </action>
+  <action name="blue_draw_two">
+   <property name="text">
+    <string>blue_draw_two</string>
+   </property>
+  </action>
+  <action name="blue_draw_three">
+   <property name="text">
+    <string>blue_draw_three</string>
+   </property>
+  </action>
+  <action name="blue_draw_four">
+   <property name="text">
+    <string>blue_draw_four</string>
+   </property>
+  </action>
+  <action name="blue_draw_five">
+   <property name="text">
+    <string>blue_draw_five</string>
+   </property>
+  </action>
+  <action name="record_load">
+   <property name="text">
+    <string>record_load</string>
+   </property>
+  </action>
+  <action name="record_save">
+   <property name="text">
+    <string>record_save</string>
+   </property>
+  </action>
+  <action name="red_draw_one">
+   <property name="text">
+    <string>red_draw_one</string>
+   </property>
+  </action>
+  <action name="red_draw_two">
+   <property name="text">
+    <string>red_draw_two</string>
+   </property>
+  </action>
+  <action name="red_draw_three">
+   <property name="text">
+    <string>red_draw_three</string>
+   </property>
+  </action>
+  <action name="red_draw_four">
+   <property name="text">
+    <string>red_draw_four</string>
+   </property>
+  </action>
+  <action name="red_draw_five">
+   <property name="text">
+    <string>red_draw_five</string>
+   </property>
+  </action>
+  <action name="record_next">
+   <property name="text">
+    <string>record_next</string>
    </property>
   </action>
  </widget>
