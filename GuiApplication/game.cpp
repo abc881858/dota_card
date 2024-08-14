@@ -656,7 +656,6 @@ void Game::slot_record_next()
     QString record_line = m_record.takeFirst();
     QStringList record_line_list = record_line.split(',');
     QString slot = record_line_list.first();
-    qDebug() << slot;
     if(slot == "slot_move_card")
     {
         int card_sn = QString(record_line_list.at(1)).toInt();
@@ -664,21 +663,21 @@ void Game::slot_record_next()
         int from_index = QString(record_line_list.at(3)).toInt();
         QString to_area = record_line_list.at(4);
         int to_index = QString(record_line_list.at(5)).toInt();
-        QMetaObject::invokeMethod(this, "slot_move_card", Q_ARG(int, card_sn), Q_ARG(QString, from_area), Q_ARG(int, from_index), Q_ARG(QString, to_area), Q_ARG(int, to_index));
+        slot_move_card(card_sn, from_area, from_index, to_area, to_index);
     }
     else if(slot == "slot_effect_card")
     {
         int card_sn = QString(record_line_list.at(1)).toInt();
         QString from_area = record_line_list.at(2);
         int from_index = QString(record_line_list.at(3)).toInt();
-        QMetaObject::invokeMethod(this, "slot_effect_card", Q_ARG(int, card_sn), Q_ARG(QString, from_area), Q_ARG(int, from_index));
+        slot_effect_card(card_sn, from_area, from_index);
     }
     else if(slot == "slot_try_card")
     {
         int card_sn = QString(record_line_list.at(1)).toInt();
         QString from_area = record_line_list.at(2);
         int from_index = QString(record_line_list.at(3)).toInt();
-        QMetaObject::invokeMethod(this, "slot_try_card", Q_ARG(int, card_sn), Q_ARG(QString, from_area), Q_ARG(int, from_index));
+        slot_try_card(card_sn, from_area, from_index);
     }
     else
     {
@@ -728,6 +727,8 @@ void Game::slot_try_card(int card_sn, QString from_area, int from_index)
 {
     SHOW_DEBUG_INFO;
     if(!m_is_recording) { m_record << QString("%1,%2,%3,%4\n").arg(__func__).arg(card_sn).arg(from_area).arg(from_index); }
+
+
 
     qDebug() << card_sn << from_area << from_index;
     emit begin_try_card(card_sn, from_area, from_index);
