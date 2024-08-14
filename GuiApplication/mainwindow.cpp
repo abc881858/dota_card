@@ -4,6 +4,7 @@
 #include <QFile>
 #include <QFileDialog>
 #include <QTime>
+#include "label.h"
 
 #define SHOW_DEBUG_INFO qDebug() << QString("%1").arg(metaObject()->className()) << __func__
 
@@ -106,11 +107,11 @@ MainWindow::MainWindow(QWidget *parent)
     connect(game, &Game::begin_try_card, this, &MainWindow::begin_try_card);
     connect(this, &MainWindow::end_try_card, game, &Game::end_try_card);
 
-    connect(ui->blue_hand_1, &Label::select, [=](){ emit signal_try_card(ui->blue_hand_1->toolTip().toInt(), "blue_hand", 0); });
-    connect(ui->blue_hand_2, &Label::select, [=](){ emit signal_try_card(ui->blue_hand_2->toolTip().toInt(), "blue_hand", 1); });
-    connect(ui->blue_hand_3, &Label::select, [=](){ emit signal_try_card(ui->blue_hand_3->toolTip().toInt(), "blue_hand", 2); });
-    connect(ui->blue_hand_4, &Label::select, [=](){ emit signal_try_card(ui->blue_hand_4->toolTip().toInt(), "blue_hand", 3); });
-    connect(ui->blue_hand_5, &Label::select, [=](){ emit signal_try_card(ui->blue_hand_5->toolTip().toInt(), "blue_hand", 4); });
+    // connect(ui->blue_hand_1, &Label::select_card, [=](){ emit signal_try_card(ui->blue_hand_1->text().toInt(), "blue_hand", 0); });
+    // connect(ui->blue_hand_2, &Label::select_card, [=](){ emit signal_try_card(ui->blue_hand_2->text().toInt(), "blue_hand", 1); });
+    // connect(ui->blue_hand_3, &Label::select_card, [=](){ emit signal_try_card(ui->blue_hand_3->text().toInt(), "blue_hand", 2); });
+    // connect(ui->blue_hand_4, &Label::select_card, [=](){ emit signal_try_card(ui->blue_hand_4->text().toInt(), "blue_hand", 3); });
+    // connect(ui->blue_hand_5, &Label::select_card, [=](){ emit signal_try_card(ui->blue_hand_5->text().toInt(), "blue_hand", 4); });
 
     thread.start();
 }
@@ -455,6 +456,10 @@ void MainWindow::on_move_card_clicked()
 void MainWindow::begin_move_card(int card_sn, QString from_area, int from_index, QString to_area, int to_index)
 {
     SHOW_DEBUG_INFO;
+    Label *label = new Label(this);
+    connect(label, &Label::select_card, [=](){ emit signal_try_card(card_sn, "blue_hand", 0); });
+    label->setText(QString::number(card_sn));
+    ui->blue_hand->addWidget(label);
     emit end_move_card(card_sn, from_area, from_index, to_area, to_index);
 }
 
@@ -476,8 +481,9 @@ void MainWindow::on_try_card_clicked()
     emit signal_try_card(ui->card_sn_try->text().toInt(), ui->from_area_try->currentText(), ui->from_index_try->text().toInt());
 }
 
-void MainWindow::begin_try_card(int card_sn, QString from_area, int from_index)
+void MainWindow::begin_try_card(int card_sn, bool try_summon, bool try_set, bool try_special, bool try_effect)
 {
     SHOW_DEBUG_INFO;
-    emit end_try_card(card_sn, from_area, from_index);
+    qDebug() << "card_sn" << card_sn << "try_summon" << try_summon << "try_set" << try_set << "try_special" << try_special << "try_effect" << try_effect;
+    emit end_try_card(card_sn, try_summon, try_set, try_special, try_effect);
 }

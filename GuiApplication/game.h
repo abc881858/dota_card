@@ -1,6 +1,7 @@
 #pragma once
 
 #include "card.h"
+#include <QMap>
 
 class Game : public QObject
 {
@@ -27,6 +28,7 @@ public:
     int check_red_front();
     int check_red_back();
 private:
+    QMap<int, Card*> m_cards;
     QList<Card*> blue_hand;
     QList<Card*> red_hand;
     QList<Card*> blue_deck;
@@ -61,6 +63,7 @@ private:
     int m_need_red_draw{0};
     QStringList m_record;
     bool m_is_recording{false};
+    bool m_enable_normal_summon{false};
 public slots:
     void slot_game_start();
     void end_game_start();
@@ -106,7 +109,7 @@ public slots:
     void slot_effect_card(int card_sn, QString from_area, int from_index);
     void end_effect_card(int card_sn, QString from_area, int from_index);
     void slot_try_card(int card_sn, QString from_area, int from_index);
-    void end_try_card(int card_sn, QString from_area, int from_index);
+    void end_try_card(int card_sn, bool try_summon, bool try_set, bool try_special, bool try_effect);
 signals:
     void begin_game_start();
     void begin_game_finish();
@@ -129,5 +132,5 @@ signals:
     void begin_record_save(QStringList list);
     void begin_move_card(int card_sn, QString from_area, int from_index, QString to_area, int to_index);
     void begin_effect_card(int card_sn, QString from_area, int from_index);
-    void begin_try_card(int card_sn, QString from_area, int from_index);
+    void begin_try_card(int card_sn, bool try_summon, bool try_set, bool try_special, bool try_effect);
 };

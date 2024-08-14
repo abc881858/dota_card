@@ -2,6 +2,7 @@
 
 #include <QLabel>
 #include <QFocusEvent>
+#include <QMouseEvent>
 
 class Label : public QLabel
 {
@@ -9,9 +10,9 @@ class Label : public QLabel
 public:
     Label(QWidget* parent = nullptr);
 protected:
-    void focusInEvent(QFocusEvent *) override;
+    void mousePressEvent(QMouseEvent *) override;
     void focusOutEvent(QFocusEvent *) override;
 signals:
-    void select();
-    void deselect();
+    void select_card();
+    // void deselect_card();
 };

@@ -40,7 +40,7 @@ public slots:
     void begin_record_save(QStringList list);
     void begin_move_card(int card_sn, QString from_area, int from_index, QString to_area, int to_index);
     void begin_effect_card(int card_sn, QString from_area, int from_index);
-    void begin_try_card(int card_sn, QString from_area, int from_index);
+    void begin_try_card(int card_sn, bool try_summon, bool try_set, bool try_special, bool try_effect);
 private slots:
     void on_game_start_triggered();
     void on_game_finish_triggered();
@@ -120,5 +120,5 @@ signals:
     void signal_effect_card(int card_sn, QString from_area, int from_index);
     void end_effect_card(int card_sn, QString from_area, int from_index);
     void signal_try_card(int card_sn, QString from_area, int from_index);
-    void end_try_card(int card_sn, QString from_area, int from_index);
+    void end_try_card(int card_sn, bool try_summon, bool try_set, bool try_special, bool try_effect);
 };

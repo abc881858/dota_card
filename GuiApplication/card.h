@@ -97,7 +97,7 @@ public:
     };
     Q_ENUM(Area)
 
-    int id;
+    int sn;
     QString name;
     QString description;
     int level;

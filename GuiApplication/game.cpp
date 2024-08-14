@@ -1,5 +1,6 @@
 #include "game.h"
 #include <QDebug>
+#include "card.h"
 
 #define SHOW_DEBUG_INFO qDebug() << QString("%1").arg(metaObject()->className()) << __func__
 
@@ -17,7 +18,7 @@ void Game::slot_game_start()
 
     //init cards
     Card *card1 = new Card;
-    card1->id = ++m_sn;
+    card1->sn = ++m_sn;
     card1->name = "melee_creep_radiant";//天辉
     card1->description = "【天使族】\\n我一般见谁不顺眼就打谁的";
     card1->level = 3;
@@ -31,7 +32,7 @@ void Game::slot_game_start()
     card1->faceup = false;
 
     Card *card2 = new Card;
-    card2->id = ++m_sn;
+    card2->sn = ++m_sn;
     card2->name = "melee_creep_dire";
     card2->description = "【恶魔族】\\n我最大的梦想就是把夜魇的枯树换成天辉的";
     card2->level = 3;
@@ -45,7 +46,7 @@ void Game::slot_game_start()
     card2->faceup = false;
 
     Card *card3 = new Card;
-    card3->id = ++m_sn;
+    card3->sn = ++m_sn;
     card3->name = "ranged_creep_radiant";
     card3->description = "【天使族】\\n我们踏过青草与玫瑰，走向血河以北，用呐喊搭建虚构的耀武扬威。我们明白没有凯旋而归，明白死亡总是无声而纯粹。我们拔出刀剑，今夜再不能饮醉，天辉万岁";
     card3->level = 3;
@@ -59,7 +60,7 @@ void Game::slot_game_start()
     card3->faceup = false;
 
     Card *card4 = new Card;
-    card4->id = ++m_sn;
+    card4->sn = ++m_sn;
     card4->name = "ranged_creep_dire";
     card4->description = "【恶魔族】\\n英雄之所以为英雄，是因为他们沐浴在圣光中诞生。他们可以拿起武器，穿上盔甲，大杀四方。即便死了，他们也可以在圣泉中重生。而我们只不过是没有灵魂的躯壳罢了";
     card4->level = 3;
@@ -73,7 +74,7 @@ void Game::slot_game_start()
     card4->faceup = false;
 
     Card *card5 = new Card;
-    card5->id = ++m_sn;
+    card5->sn = ++m_sn;
     card5->name = "zeus";
     card5->description = "【魔法师族·效果】\\n①当自己场上有其他怪兽时，这张卡可以从手牌特殊召唤。\\n②一回合一次，丢弃一张手牌发动，破坏对方场上一只怪兽\\n③一回合一次，丢弃两张手牌发动，对方场上怪兽守备力降低1000点，怪兽守备力降至0的场合破坏怪兽。若这张卡装备了[阿哈利姆神杖]则改为降低2000点守备力";
     card5->level = 2;
@@ -87,7 +88,7 @@ void Game::slot_game_start()
     card5->faceup = false;
 
     Card *card6 = new Card;
-    card6->id = ++m_sn;
+    card6->sn = ++m_sn;
     card6->name = "axe";
     card6->description = "【兽战士族·效果】\\n①对方进入战斗流程时，这张卡可以变为表侧守备表示且守备力上升1500，强制对方所有怪兽变为表侧攻击表示[翻转效果不发动]且必须对这张卡发动攻击。\\n②这张卡受到怪兽攻击时，降低对方500攻·防。\\n③一回合一次，丢弃一张手牌，选择对方场上一只表侧表示的怪兽，若该怪兽守备力大于1000则降低700点防御力，否则破坏此怪兽并抽一张卡，若成功破坏了怪兽，此效果可以再次使用。若装备了[阿哈利姆神杖]则改为大于1500";
     card6->level = 7;
@@ -101,7 +102,7 @@ void Game::slot_game_start()
     card6->faceup = false;
 
     Card *card7 = new Card;
-    card7->id = ++m_sn;
+    card7->sn = ++m_sn;
     card7->name = "ogremagi";
     card7->description = "【兽族·效果】\\n①自己场上没有怪兽而对方场上有怪兽时，这张卡可以从手牌特殊召唤。\\n②一回合一次，指定对方场上一只怪兽攻·守下降700，之后丢三枚硬币，每有一枚为正则额外下降700点攻·守，若因此效果降至0则破坏该怪兽。若这张卡装备了[阿哈利姆神杖]则此效果一回合可以使用两次";
     card7->level = 4;
@@ -115,7 +116,7 @@ void Game::slot_game_start()
     card7->faceup = false;
 
     Card *card8 = new Card;
-    card8->id = ++m_sn;
+    card8->sn = ++m_sn;
     card8->name = "meepo";
     card8->description = "【兽族·效果】\\n①把自己1张手牌送去墓地才能发动。从手牌·卡组把1只[米波]特殊召唤。[米波]从场上离开的场合这张卡破坏";
     card8->level = 3;
@@ -129,7 +130,7 @@ void Game::slot_game_start()
     card8->faceup = false;
 
     Card *card9 = new Card;
-    card9->id = ++m_sn;
+    card9->sn = ++m_sn;
     card9->name = "melee_creep_radiant";//天辉
     card9->description = "【天使族】\\n我一般见谁不顺眼就打谁的";
     card9->level = 3;
@@ -143,7 +144,7 @@ void Game::slot_game_start()
     card9->faceup = false;
 
     Card *card10 = new Card;
-    card10->id = ++m_sn;
+    card10->sn = ++m_sn;
     card10->name = "melee_creep_dire";
     card10->description = "【恶魔族】\\n我最大的梦想就是把夜魇的枯树换成天辉的";
     card10->level = 3;
@@ -157,7 +158,7 @@ void Game::slot_game_start()
     card10->faceup = false;
 
     Card *card11 = new Card;
-    card11->id = ++m_sn;
+    card11->sn = ++m_sn;
     card11->name = "ranged_creep_radiant";
     card11->description = "【天使族】\\n我们踏过青草与玫瑰，走向血河以北，用呐喊搭建虚构的耀武扬威。我们明白没有凯旋而归，明白死亡总是无声而纯粹。我们拔出刀剑，今夜再不能饮醉，天辉万岁";
     card11->level = 3;
@@ -171,7 +172,7 @@ void Game::slot_game_start()
     card11->faceup = false;
 
     Card *card12 = new Card;
-    card12->id = ++m_sn;
+    card12->sn = ++m_sn;
     card12->name = "ranged_creep_dire";
     card12->description = "【恶魔族】\\n英雄之所以为英雄，是因为他们沐浴在圣光中诞生。他们可以拿起武器，穿上盔甲，大杀四方。即便死了，他们也可以在圣泉中重生。而我们只不过是没有灵魂的躯壳罢了";
     card12->level = 3;
@@ -185,7 +186,7 @@ void Game::slot_game_start()
     card12->faceup = false;
 
     Card *card13 = new Card;
-    card13->id = ++m_sn;
+    card13->sn = ++m_sn;
     card13->name = "zeus";
     card13->description = "【魔法师族·效果】\\n①当自己场上有其他怪兽时，这张卡可以从手牌特殊召唤。\\n②一回合一次，丢弃一张手牌发动，破坏对方场上一只怪兽\\n③一回合一次，丢弃两张手牌发动，对方场上怪兽守备力降低1000点，怪兽守备力降至0的场合破坏怪兽。若这张卡装备了[阿哈利姆神杖]则改为降低2000点守备力";
     card13->level = 2;
@@ -199,7 +200,7 @@ void Game::slot_game_start()
     card13->faceup = false;
 
     Card *card14 = new Card;
-    card14->id = ++m_sn;
+    card14->sn = ++m_sn;
     card14->name = "axe";
     card14->description = "【兽战士族·效果】\\n①对方进入战斗流程时，这张卡可以变为表侧守备表示且守备力上升1500，强制对方所有怪兽变为表侧攻击表示[翻转效果不发动]且必须对这张卡发动攻击。\\n②这张卡受到怪兽攻击时，降低对方500攻·防。\\n③一回合一次，丢弃一张手牌，选择对方场上一只表侧表示的怪兽，若该怪兽守备力大于1000则降低700点防御力，否则破坏此怪兽并抽一张卡，若成功破坏了怪兽，此效果可以再次使用。若装备了[阿哈利姆神杖]则改为大于1500";
     card14->level = 7;
@@ -213,7 +214,7 @@ void Game::slot_game_start()
     card14->faceup = false;
 
     Card *card15 = new Card;
-    card15->id = ++m_sn;
+    card15->sn = ++m_sn;
     card15->name = "ogremagi";
     card15->description = "【兽族·效果】\\n①自己场上没有怪兽而对方场上有怪兽时，这张卡可以从手牌特殊召唤。\\n②一回合一次，指定对方场上一只怪兽攻·守下降700，之后丢三枚硬币，每有一枚为正则额外下降700点攻·守，若因此效果降至0则破坏该怪兽。若这张卡装备了[阿哈利姆神杖]则此效果一回合可以使用两次";
     card15->level = 4;
@@ -227,7 +228,7 @@ void Game::slot_game_start()
     card15->faceup = false;
 
     Card *card16 = new Card;
-    card16->id = ++m_sn;
+    card16->sn = ++m_sn;
     card16->name = "meepo";
     card16->description = "【兽族·效果】\\n①把自己1张手牌送去墓地才能发动。从手牌·卡组把1只[米波]特殊召唤。[米波]从场上离开的场合这张卡破坏";
     card16->level = 3;
@@ -239,6 +240,23 @@ void Game::slot_game_start()
     card16->area = Card::AreaBlueDeck;
     card16->position = true;
     card16->faceup = false;
+
+    m_cards.insert(card1->sn, card1);
+    m_cards.insert(card2->sn, card2);
+    m_cards.insert(card3->sn, card3);
+    m_cards.insert(card4->sn, card4);
+    m_cards.insert(card5->sn, card5);
+    m_cards.insert(card6->sn, card6);
+    m_cards.insert(card7->sn, card7);
+    m_cards.insert(card8->sn, card8);
+    m_cards.insert(card9->sn, card9);
+    m_cards.insert(card10->sn, card10);
+    m_cards.insert(card11->sn, card11);
+    m_cards.insert(card12->sn, card12);
+    m_cards.insert(card13->sn, card13);
+    m_cards.insert(card14->sn, card14);
+    m_cards.insert(card15->sn, card15);
+    m_cards.insert(card16->sn, card16);
 
     //init board
     blue_deck << card1 << card2 << card3 << card4 << card5 << card6 << card7 << card8;
@@ -349,6 +367,7 @@ void Game::slot_phase_blue_main1()
 void Game::end_phase_blue_main1()
 {
     SHOW_DEBUG_INFO;
+    m_enable_normal_summon = true;
     if(m_is_recording) { slot_record_next(); }
 }
 
@@ -611,8 +630,9 @@ int Game::check_red_back()
 void Game::slot_blue_draw_cards(int size)
 {
     SHOW_DEBUG_INFO;
-    m_need_blue_draw = size;
     qDebug() << "need blue draw cards" << m_need_blue_draw;
+
+    m_need_blue_draw = size;
     emit begin_blue_draw_cards(size);
 }
 
@@ -625,8 +645,9 @@ void Game::end_blue_draw_cards(int size)
 void Game::slot_red_draw_cards(int size)
 {
     SHOW_DEBUG_INFO;
-    m_need_red_draw = size;
     qDebug() << "need red draw cards" << m_need_red_draw;
+
+    m_need_red_draw = size;
     emit begin_red_draw_cards(size);
 }
 
@@ -688,9 +709,9 @@ void Game::slot_record_next()
 void Game::slot_move_card(int card_sn, QString from_area, int from_index, QString to_area, int to_index)
 {
     SHOW_DEBUG_INFO;
-    if(!m_is_recording) { m_record << QString("%1,%2,%3,%4,%5,%6\n").arg(__func__).arg(card_sn).arg(from_area).arg(from_index).arg(to_area).arg(to_index); }
-
     qDebug() << card_sn << from_area << from_index << to_area << to_index;
+
+    if(!m_is_recording) { m_record << QString("%1,%2,%3,%4,%5,%6\n").arg(__func__).arg(card_sn).arg(from_area).arg(from_index).arg(to_area).arg(to_index); }
     emit begin_move_card(card_sn, from_area, from_index, to_area, to_index);
 }
 
@@ -702,15 +723,22 @@ void Game::end_move_card(int card_sn, QString from_area, int from_index, QString
     Q_UNUSED(to_area)
     Q_UNUSED(to_index)
     SHOW_DEBUG_INFO;
-    if(m_is_recording) { slot_record_next(); }
+    if(m_is_recording)
+    {
+        slot_record_next();
+    }
+    else
+    {
+        //summon or special success, query and ask for spell or trap
+    }
 }
 
 void Game::slot_effect_card(int card_sn, QString from_area, int from_index)
 {
     SHOW_DEBUG_INFO;
-    if(!m_is_recording) { m_record << QString("%1,%2,%3,%4\n").arg(__func__).arg(card_sn).arg(from_area).arg(from_index); }
-
     qDebug() << card_sn << from_area << from_index;
+
+    if(!m_is_recording) { m_record << QString("%1,%2,%3,%4\n").arg(__func__).arg(card_sn).arg(from_area).arg(from_index); }
     emit begin_effect_card(card_sn, from_area, from_index);
 }
 
@@ -726,19 +754,50 @@ void Game::end_effect_card(int card_sn, QString from_area, int from_index)
 void Game::slot_try_card(int card_sn, QString from_area, int from_index)
 {
     SHOW_DEBUG_INFO;
+    qDebug() << card_sn << from_area << from_index;
+
     if(!m_is_recording) { m_record << QString("%1,%2,%3,%4\n").arg(__func__).arg(card_sn).arg(from_area).arg(from_index); }
 
+    bool try_summon = false;
+    bool try_set = false;
+    bool try_special = false;
+    bool try_effect = false;
 
+    Card *card = m_cards[card_sn];
 
-    qDebug() << card_sn << from_area << from_index;
-    emit begin_try_card(card_sn, from_area, from_index);
+    if(m_enable_normal_summon)
+    {
+        if(card->level < 5)
+        {
+            try_summon = true;
+            try_set = true;
+        }
+        else if(card->level < 7)
+        {
+            //if front has one monster
+        }
+        else if(card->level < 9)
+        {
+            //if front has two monster
+        }
+        else
+        {
+            //if front has three monster
+        }
+    }
+
+    // if(try_special(card))
+
+    emit begin_try_card(card_sn, try_summon, try_set, try_special, try_effect);
 }
 
-void Game::end_try_card(int card_sn, QString from_area, int from_index)
+void Game::end_try_card(int card_sn, bool try_summon, bool try_set, bool try_special, bool try_effect)
 {
     Q_UNUSED(card_sn)
-    Q_UNUSED(from_area)
-    Q_UNUSED(from_index)
+    Q_UNUSED(try_summon)
+    Q_UNUSED(try_set)
+    Q_UNUSED(try_special)
+    Q_UNUSED(try_effect)
     SHOW_DEBUG_INFO;
     if(m_is_recording) { slot_record_next(); }
 }
