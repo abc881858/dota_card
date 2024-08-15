@@ -312,6 +312,7 @@ void Game::slot_shuffle_blue_deck()
     {
         list << card->sn;
     }
+    qDebug() << "list" << list;
 
     //do shuffle blue deck
     emit begin_shuffle_blue_deck(list);
@@ -918,11 +919,6 @@ void Game::slot_try_card(int card_sn, QString from_area, int from_index)
 
 void Game::end_try_card(int card_sn, bool try_summon, bool try_set, bool try_special, bool try_effect)
 {
-    Q_UNUSED()
-    Q_UNUSED()
-    Q_UNUSED()
-    Q_UNUSED()
-    Q_UNUSED(try_effect)
     SHOW_DEBUG_INFO;
     qDebug() << "card_sn" << card_sn
              << "try_summon" << try_summon
@@ -940,23 +936,23 @@ void Game::slot_summon_card(int card_sn)
 
     Card::Area area = check_blue_front();
     int to_index;
-    if(area == blue_front_1)
+    if(area == Card::AreaBlueFront1)
     {
         to_index = 1;
     }
-    else if(area == blue_front_2)
+    else if(area == Card::AreaBlueFront2)
     {
         to_index = 2;
     }
-    else if(area == blue_front_3)
+    else if(area == Card::AreaBlueFront3)
     {
         to_index = 3;
     }
-    else if(area == blue_front_4)
+    else if(area == Card::AreaBlueFront4)
     {
         to_index = 4;
     }
-    else if(area == blue_front_5)
+    else if(area == Card::AreaBlueFront5)
     {
         to_index = 5;
     }
