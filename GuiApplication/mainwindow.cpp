@@ -107,12 +107,6 @@ MainWindow::MainWindow(QWidget *parent)
     connect(game, &Game::begin_try_card, this, &MainWindow::begin_try_card);
     connect(this, &MainWindow::end_try_card, game, &Game::end_try_card);
 
-    // connect(ui->blue_hand_1, &Label::select_card, [=](){ emit signal_try_card(ui->blue_hand_1->text().toInt(), "blue_hand", 0); });
-    // connect(ui->blue_hand_2, &Label::select_card, [=](){ emit signal_try_card(ui->blue_hand_2->text().toInt(), "blue_hand", 1); });
-    // connect(ui->blue_hand_3, &Label::select_card, [=](){ emit signal_try_card(ui->blue_hand_3->text().toInt(), "blue_hand", 2); });
-    // connect(ui->blue_hand_4, &Label::select_card, [=](){ emit signal_try_card(ui->blue_hand_4->text().toInt(), "blue_hand", 3); });
-    // connect(ui->blue_hand_5, &Label::select_card, [=](){ emit signal_try_card(ui->blue_hand_5->text().toInt(), "blue_hand", 4); });
-
     thread.start();
 }
 
