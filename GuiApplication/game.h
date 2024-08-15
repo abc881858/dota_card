@@ -1,7 +1,7 @@
 #pragma once
 
 #include "card.h"
-#include <QMap>
+#include <QHash>
 
 class Game : public QObject
 {
@@ -23,12 +23,16 @@ public:
         PhaseRedEnd
     };
     Q_ENUM(Phase)
-    int check_blue_front();
-    int check_blue_back();
-    int check_red_front();
-    int check_red_back();
+    Card::Area check_blue_front();
+    Card::Area check_blue_back();
+    Card::Area check_red_front();
+    Card::Area check_red_back();
+    int count_blue_front();
+    int count_blue_back();
+    int count_red_front();
+    int count_red_back();
 private:
-    QMap<int, Card*> m_cards;
+    QHash<int, Card*> m_cards;
     QList<Card*> blue_hand;
     QList<Card*> red_hand;
     QList<Card*> blue_deck;
@@ -110,10 +114,12 @@ public slots:
     void end_effect_card(int card_sn, QString from_area, int from_index);
     void slot_try_card(int card_sn, QString from_area, int from_index);
     void end_try_card(int card_sn, bool try_summon, bool try_set, bool try_special, bool try_effect);
+    void slot_summon_card(int card_sn);
+    void end_summon_card(int card_sn);
 signals:
     void begin_game_start();
     void begin_game_finish();
-    void begin_shuffle_blue_deck();
+    void begin_shuffle_blue_deck(QList<int>);
     void begin_shuffle_red_deck();
     void begin_phase_blue_draw();
     void begin_phase_blue_standby();
@@ -133,4 +139,5 @@ signals:
     void begin_move_card(int card_sn, QString from_area, int from_index, QString to_area, int to_index);
     void begin_effect_card(int card_sn, QString from_area, int from_index);
     void begin_try_card(int card_sn, bool try_summon, bool try_set, bool try_special, bool try_effect);
+    void begin_summon_card(int card_sn, int to_index);
 };

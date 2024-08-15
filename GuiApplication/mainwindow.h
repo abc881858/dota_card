@@ -2,7 +2,9 @@
 
 #include <QMainWindow>
 #include <QThread>
+#include <QHash>
 #include "game.h"
+#include "label.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,10 +20,11 @@ private:
     Ui::MainWindow *ui;
     Game *game;
     QThread thread;
+    QHash<int, QLabel*> m_labels;
 public slots:
     void begin_game_start();
     void begin_game_finish();
-    void begin_shuffle_blue_deck();
+    void begin_shuffle_blue_deck(QList<int> list);
     void begin_shuffle_red_deck();
     void begin_phase_blue_draw();
     void begin_phase_blue_standby();
@@ -41,6 +44,7 @@ public slots:
     void begin_move_card(int card_sn, QString from_area, int from_index, QString to_area, int to_index);
     void begin_effect_card(int card_sn, QString from_area, int from_index);
     void begin_try_card(int card_sn, bool try_summon, bool try_set, bool try_special, bool try_effect);
+    void begin_summon_card(int card_sn, int to_index);
 private slots:
     void on_game_start_triggered();
     void on_game_finish_triggered();
@@ -74,6 +78,7 @@ private slots:
     void on_move_card_clicked();
     void on_effect_card_clicked();
     void on_try_card_clicked();
+    void on_summon_card_clicked();
 signals:
     void signal_game_start();
     void end_game_start();
@@ -121,4 +126,6 @@ signals:
     void end_effect_card(int card_sn, QString from_area, int from_index);
     void signal_try_card(int card_sn, QString from_area, int from_index);
     void end_try_card(int card_sn, bool try_summon, bool try_set, bool try_special, bool try_effect);
+    void signal_summon_card(int card_sn);
+    void end_summon_card(int card_sn);
 };

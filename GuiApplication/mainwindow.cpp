@@ -107,6 +107,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(game, &Game::begin_try_card, this, &MainWindow::begin_try_card);
     connect(this, &MainWindow::end_try_card, game, &Game::end_try_card);
 
+    connect(this, &MainWindow::signal_summon_card, game, &Game::slot_summon_card);
+    connect(game, &Game::begin_summon_card, this, &MainWindow::begin_summon_card);
+    connect(this, &MainWindow::end_summon_card, game, &Game::end_summon_card);
+
     thread.start();
 }
 
@@ -149,10 +153,17 @@ void MainWindow::on_shuffle_blue_deck_triggered()
     emit signal_shuffle_blue_deck();
 }
 
-void MainWindow::begin_shuffle_blue_deck()
+void MainWindow::begin_shuffle_blue_deck(QList<int> list)
 {
     SHOW_DEBUG_INFO;
     //animate shuffle_blue_deck
+    for(int i=0; i<list.size(); i++)
+    {
+        Label *label = new Label(this);
+        label->setText(QString::number(list.at(i)));
+        label->hide();
+        m_labels.insert(list.at(i), label);
+    }
     emit end_shuffle_blue_deck();
 }
 
@@ -453,6 +464,7 @@ void MainWindow::begin_move_card(int card_sn, QString from_area, int from_index,
     Label *label = new Label(this);
     connect(label, &Label::select_card, [=](){ emit signal_try_card(card_sn, "blue_hand", 0); });
     label->setText(QString::number(card_sn));
+    m_labels.insert(card_sn, label);
     ui->blue_hand->addWidget(label);
     emit end_move_card(card_sn, from_area, from_index, to_area, to_index);
 }
@@ -480,4 +492,18 @@ void MainWindow::begin_try_card(int card_sn, bool try_summon, bool try_set, bool
     SHOW_DEBUG_INFO;
     qDebug() << "card_sn" << card_sn << "try_summon" << try_summon << "try_set" << try_set << "try_special" << try_special << "try_effect" << try_effect;
     emit end_try_card(card_sn, try_summon, try_set, try_special, try_effect);
+}
+
+void MainWindow::on_summon_card_clicked()
+{
+    SHOW_DEBUG_INFO;
+    emit signal_summon_card(ui->card_sn_summon->text().toInt());
+}
+
+void MainWindow::begin_summon_card(int card_sn, int to_index)
+{
+    SHOW_DEBUG_INFO;
+    qDebug() << "card_sn" << card_sn << "to_index" << to_index;
+
+    emit end_summon_card(card_sn);
 }

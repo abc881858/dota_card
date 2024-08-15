@@ -1,6 +1,9 @@
 #include "game.h"
 #include <QDebug>
 #include "card.h"
+#include <QList>
+#include <random>    // std::random_device, std::mt19937
+#include <algorithm> // std::shuffle
 
 #define SHOW_DEBUG_INFO qDebug() << QString("%1").arg(metaObject()->className()) << __func__
 
@@ -297,8 +300,21 @@ void Game::slot_shuffle_blue_deck()
     SHOW_DEBUG_INFO;
     if(!m_is_recording) { m_record << QString("%1\n").arg(__func__); }
 
+    // 使用随机数种子初始化随机数生成器
+    std::random_device rd;
+    std::mt19937 g(rd());
+
+    // 洗牌
+    std::shuffle(blue_deck.begin(), blue_deck.end(), g);
+
+    QList<int> list;
+    for(Card *card : blue_deck)
+    {
+        list << card->sn;
+    }
+
     //do shuffle blue deck
-    emit begin_shuffle_blue_deck();
+    emit begin_shuffle_blue_deck(list);
 }
 
 void Game::end_shuffle_blue_deck()
@@ -515,116 +531,220 @@ void Game::end_phase_red_end()
     if(m_is_recording) { slot_record_next(); }
 }
 
-int Game::check_blue_front()
+Card::Area Game::check_blue_front()
 {
     if(blue_front_1 == nullptr)
     {
-        return 1;
+        return Card::AreaBlueFront1;
     }
     else if(blue_front_2 == nullptr)
     {
-        return 2;
+        return Card::AreaBlueFront2;
     }
     else if(blue_front_3 == nullptr)
     {
-        return 3;
+        return Card::AreaBlueFront3;
     }
     else if(blue_front_4 == nullptr)
     {
-        return 4;
+        return Card::AreaBlueFront4;
     }
     else if(blue_front_5 == nullptr)
     {
-        return 5;
+        return Card::AreaBlueFront5;
     }
     else
     {
-        return 0;
+        return Card::AreaNo;
     }
 }
 
-int Game::check_blue_back()
+Card::Area Game::check_blue_back()
 {
     if(blue_back_1 == nullptr)
     {
-        return 1;
+        return Card::AreaBlueBack1;
     }
     else if(blue_back_2 == nullptr)
     {
-        return 2;
+        return Card::AreaBlueBack2;
     }
     else if(blue_back_3 == nullptr)
     {
-        return 3;
+        return Card::AreaBlueBack3;
     }
     else if(blue_back_4 == nullptr)
     {
-        return 4;
+        return Card::AreaBlueBack4;
     }
     else if(blue_back_5 == nullptr)
     {
-        return 5;
+        return Card::AreaBlueBack5;
     }
     else
     {
-        return 0;
+        return Card::AreaNo;
     }
 }
 
-int Game::check_red_front()
+Card::Area Game::check_red_front()
 {
     if(red_front_1 == nullptr)
     {
-        return 1;
+        return Card::AreaRedFront1;
     }
     else if(red_front_2 == nullptr)
     {
-        return 2;
+        return Card::AreaRedFront2;
     }
     else if(red_front_3 == nullptr)
     {
-        return 3;
+        return Card::AreaRedFront3;
     }
     else if(red_front_4 == nullptr)
     {
-        return 4;
+        return Card::AreaRedFront4;
     }
     else if(red_front_5 == nullptr)
     {
-        return 5;
+        return Card::AreaRedFront5;
     }
     else
     {
-        return 0;
+        return Card::AreaNo;
     }
 }
 
-int Game::check_red_back()
+Card::Area Game::check_red_back()
 {
     if(red_back_1 == nullptr)
     {
-        return 1;
+        return Card::AreaRedBack1;
     }
     else if(red_back_2 == nullptr)
     {
-        return 2;
+        return Card::AreaRedBack2;
     }
     else if(red_back_3 == nullptr)
     {
-        return 3;
+        return Card::AreaRedBack3;
     }
     else if(red_back_4 == nullptr)
     {
-        return 4;
+        return Card::AreaRedBack4;
     }
     else if(red_back_5 == nullptr)
     {
-        return 5;
+        return Card::AreaRedBack5;
     }
     else
     {
-        return 0;
+        return Card::AreaNo;
     }
+}
+
+int Game::count_blue_front()
+{
+    int count = 0;
+    if(blue_front_1 != nullptr)
+    {
+        count++;
+    }
+    else if(blue_front_2 == nullptr)
+    {
+        count++;
+    }
+    else if(blue_front_3 == nullptr)
+    {
+        count++;
+    }
+    else if(blue_front_4 == nullptr)
+    {
+        count++;
+    }
+    else if(blue_front_5 == nullptr)
+    {
+        count++;
+    }
+    return count;
+}
+
+int Game::count_blue_back()
+{
+    int count = 0;
+    if(blue_back_1 != nullptr)
+    {
+        count++;
+    }
+    else if(blue_back_2 == nullptr)
+    {
+        count++;
+    }
+    else if(blue_back_3 == nullptr)
+    {
+        count++;
+    }
+    else if(blue_back_4 == nullptr)
+    {
+        count++;
+    }
+    else if(blue_back_5 == nullptr)
+    {
+        count++;
+    }
+    return count;
+}
+
+int Game::count_red_front()
+{
+    int count = 0;
+    if(red_front_1 != nullptr)
+    {
+        count++;
+    }
+    else if(red_front_2 == nullptr)
+    {
+        count++;
+    }
+    else if(red_front_3 == nullptr)
+    {
+        count++;
+    }
+    else if(red_front_4 == nullptr)
+    {
+        count++;
+    }
+    else if(red_front_5 == nullptr)
+    {
+        count++;
+    }
+    return count;
+}
+
+int Game::count_red_back()
+{
+    int count = 0;
+    if(red_back_1 != nullptr)
+    {
+        count++;
+    }
+    else if(red_back_2 == nullptr)
+    {
+        count++;
+    }
+    else if(red_back_3 == nullptr)
+    {
+        count++;
+    }
+    else if(red_back_4 == nullptr)
+    {
+        count++;
+    }
+    else if(red_back_5 == nullptr)
+    {
+        count++;
+    }
+    return count;
 }
 
 void Game::slot_blue_draw_cards(int size)
@@ -638,8 +758,8 @@ void Game::slot_blue_draw_cards(int size)
 
 void Game::end_blue_draw_cards(int size)
 {
-    Q_UNUSED(size)
     SHOW_DEBUG_INFO;
+    qDebug() << "size" << size;
 }
 
 void Game::slot_red_draw_cards(int size)
@@ -653,8 +773,8 @@ void Game::slot_red_draw_cards(int size)
 
 void Game::end_red_draw_cards(int size)
 {
-    Q_UNUSED(size)
     SHOW_DEBUG_INFO;
+    qDebug() << "size" << size;
 }
 
 void Game::slot_record_save()
@@ -709,7 +829,7 @@ void Game::slot_record_next()
 void Game::slot_move_card(int card_sn, QString from_area, int from_index, QString to_area, int to_index)
 {
     SHOW_DEBUG_INFO;
-    qDebug() << card_sn << from_area << from_index << to_area << to_index;
+    qDebug() << "card_sn" << card_sn << "from_area" << from_area << "from_index" << from_index << "to_area" << to_area << "to_index" << to_index;
 
     if(!m_is_recording) { m_record << QString("%1,%2,%3,%4,%5,%6\n").arg(__func__).arg(card_sn).arg(from_area).arg(from_index).arg(to_area).arg(to_index); }
     emit begin_move_card(card_sn, from_area, from_index, to_area, to_index);
@@ -717,12 +837,8 @@ void Game::slot_move_card(int card_sn, QString from_area, int from_index, QStrin
 
 void Game::end_move_card(int card_sn, QString from_area, int from_index, QString to_area, int to_index)
 {
-    Q_UNUSED(card_sn)
-    Q_UNUSED(from_area)
-    Q_UNUSED(from_index)
-    Q_UNUSED(to_area)
-    Q_UNUSED(to_index)
     SHOW_DEBUG_INFO;
+    qDebug() << "card_sn" << card_sn << "from_area" << from_area << "from_index" << from_index << "to_area" << to_area << "to_index" << to_index;
     if(m_is_recording)
     {
         slot_record_next();
@@ -736,7 +852,7 @@ void Game::end_move_card(int card_sn, QString from_area, int from_index, QString
 void Game::slot_effect_card(int card_sn, QString from_area, int from_index)
 {
     SHOW_DEBUG_INFO;
-    qDebug() << card_sn << from_area << from_index;
+    qDebug() << "card_sn" << card_sn << "from_area" << from_area << "from_index" << from_index;
 
     if(!m_is_recording) { m_record << QString("%1,%2,%3,%4\n").arg(__func__).arg(card_sn).arg(from_area).arg(from_index); }
     emit begin_effect_card(card_sn, from_area, from_index);
@@ -744,46 +860,55 @@ void Game::slot_effect_card(int card_sn, QString from_area, int from_index)
 
 void Game::end_effect_card(int card_sn, QString from_area, int from_index)
 {
-    Q_UNUSED(card_sn)
-    Q_UNUSED(from_area)
-    Q_UNUSED(from_index)
     SHOW_DEBUG_INFO;
+    qDebug() << "card_sn" << card_sn << "from_area" << from_area << "from_index" << from_index;
+
     if(m_is_recording) { slot_record_next(); }
 }
 
 void Game::slot_try_card(int card_sn, QString from_area, int from_index)
 {
     SHOW_DEBUG_INFO;
-    qDebug() << card_sn << from_area << from_index;
+    qDebug() << "card_sn" << card_sn << "from_area" << from_area << "from_index" << from_index;
 
-    if(!m_is_recording) { m_record << QString("%1,%2,%3,%4\n").arg(__func__).arg(card_sn).arg(from_area).arg(from_index); }
-
-    bool try_summon = false;
-    bool try_set = false;
+    bool try_summon = m_enable_normal_summon;
+    bool try_set = m_enable_normal_summon;
     bool try_special = false;
     bool try_effect = false;
 
     Card *card = m_cards[card_sn];
 
-    if(m_enable_normal_summon)
+    int count = count_blue_front();
+    int max_level;
+    if(count > 2)
     {
-        if(card->level < 5)
-        {
-            try_summon = true;
-            try_set = true;
-        }
-        else if(card->level < 7)
-        {
-            //if front has one monster
-        }
-        else if(card->level < 9)
-        {
-            //if front has two monster
-        }
-        else
-        {
-            //if front has three monster
-        }
+        max_level = 10;
+    }
+    else if(count > 1)
+    {
+        max_level = 8;
+    }
+    else if(count > 0)
+    {
+        max_level = 6;
+    }
+    else
+    {
+        max_level = 4;
+    }
+
+    //level must smaller than 11
+
+    if(card->level > max_level)
+    {
+        try_summon = false;
+        try_set = false;
+    }
+
+    if(check_blue_front() == Card::AreaNo)
+    {
+        try_summon = false;
+        try_set = false;
     }
 
     // if(try_special(card))
@@ -793,11 +918,56 @@ void Game::slot_try_card(int card_sn, QString from_area, int from_index)
 
 void Game::end_try_card(int card_sn, bool try_summon, bool try_set, bool try_special, bool try_effect)
 {
-    Q_UNUSED(card_sn)
-    Q_UNUSED(try_summon)
-    Q_UNUSED(try_set)
-    Q_UNUSED(try_special)
+    Q_UNUSED()
+    Q_UNUSED()
+    Q_UNUSED()
+    Q_UNUSED()
     Q_UNUSED(try_effect)
     SHOW_DEBUG_INFO;
+    qDebug() << "card_sn" << card_sn
+             << "try_summon" << try_summon
+             << "try_set" << try_set
+             << "try_special" << try_special
+             << "try_effect" << try_effect;
+}
+
+void Game::slot_summon_card(int card_sn)
+{
+    SHOW_DEBUG_INFO;
+    qDebug() << "card_sn" << card_sn;
+
+    if(!m_is_recording) { m_record << QString("%1,%2\n").arg(__func__).arg(card_sn); }
+
+    Card::Area area = check_blue_front();
+    int to_index;
+    if(area == blue_front_1)
+    {
+        to_index = 1;
+    }
+    else if(area == blue_front_2)
+    {
+        to_index = 2;
+    }
+    else if(area == blue_front_3)
+    {
+        to_index = 3;
+    }
+    else if(area == blue_front_4)
+    {
+        to_index = 4;
+    }
+    else if(area == blue_front_5)
+    {
+        to_index = 5;
+    }
+
+    emit begin_summon_card(card_sn, to_index);
+}
+
+void Game::end_summon_card(int card_sn)
+{
+    SHOW_DEBUG_INFO;
+    qDebug() << "card_sn" << card_sn;
+
     if(m_is_recording) { slot_record_next(); }
 }
