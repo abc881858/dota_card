@@ -17,5 +17,4 @@ void Label::mousePressEvent(QMouseEvent *)
 void Label::focusOutEvent(QFocusEvent *)
 {
     setStyleSheet("QLabel { background-color : rgb(85, 255, 255); }");
-    // emit deselect_card();
 }

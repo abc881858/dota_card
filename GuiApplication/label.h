@@ -14,5 +14,4 @@ protected:
     void focusOutEvent(QFocusEvent *) override;
 signals:
     void select_card();
-    // void deselect_card();
 };
